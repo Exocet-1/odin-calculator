@@ -1,0 +1,102 @@
+@font-face{
+    font-family: 'ExoSans';
+    src: url('font/sserif.ttf');
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('images/Setup.png');
+    background-position: center;
+}
+
+.container {
+    background-color: lightgrey;
+    border: 2px outset aliceblue;
+    width: 50vh;
+    height: 30vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.titlebar {
+    background-color: #010180;
+    color: aliceblue;
+    border-bottom: 2px outset aliceblue;
+    font-family: 'ExoSans', Arial, Helvetica, sans-serif;
+    font-size: large;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 8px;
+}
+
+.titlebar h1 {
+    font-family: 'ExoSans', Arial, Helvetica, sans-serif;
+    font-size: large;
+    font-weight: normal;
+    padding-bottom: 0px;
+    margin: 0;
+    flex: 1;
+}
+
+.titlebar img {
+    padding-left: 8px;
+}
+input {
+    font-family: 'ExoSans', Arial, Helvetica, sans-serif;
+    font-size: large;
+    height: 32px;
+    text-align: right;
+}
+
+.keypad {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex: 1;
+}
+
+.row {
+    display: flex;
+    gap: 8px;
+    flex: 1;
+    justify-content: space-around;
+}
+
+button {
+    font-family: 'ExoSans', Arial, Helvetica, sans-serif;
+    flex: 1;
+    margin: 0;
+    padding: 0;
+    border: 2px outset white;
+    background-color: inherit;
+    color: black;
+}
+button:hover {
+    background-color: rgb(226, 226, 226);
+}
+
+button:active {
+    /* background-color: rgb(133, 133, 133); */
+    border-style: inset;
+}
+
+button#zero {
+    flex: 2;
+}
+
+button.operand {
+    color: blue;
+    font-weight: bold;
+}
+button#equal {
+    color: red;
+    font-weight: bold;
+}
