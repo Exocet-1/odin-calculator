@@ -3,8 +3,16 @@
     src: url('font/sserif.ttf');
 }
 
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+
 body {
     margin: 0;
+    padding: 0;
+    border: 0;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -65,9 +73,7 @@ input {
 
 .row {
     display: flex;
-    gap: 8px;
     flex: 1;
-    justify-content: space-around;
 }
 
 button {
@@ -78,6 +84,7 @@ button {
     border: 2px outset white;
     background-color: inherit;
     color: black;
+    
 }
 button:hover {
     background-color: rgb(226, 226, 226);
@@ -87,12 +94,16 @@ button:active {
     /* background-color: rgb(133, 133, 133); */
     border-style: inset;
 }
+button:disabled {
+    color: grey;
+    border-style: inset;
+}
 
 button#zero {
     flex: 2;
 }
 
-button.operand {
+button.operator {
     color: blue;
     font-weight: bold;
 }

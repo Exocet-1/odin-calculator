@@ -15,35 +15,36 @@
     <input class="display" value="0">
     <div class="keypad">
       <div class="row">
-        <button class="operand">C</button>
-        <button class="operand">(</button>
-        <button class="operand">)</button>
-        <button class="operand">/</button>
+        <button id="clear">C</button>
+        <button class="parens" disabled>(</button>
+        <button class="parens" disabled>)</button>
+        <button class="operator">/</button>
       </div>
       <div class="row">
         <button>7</button>
         <button>8</button>
         <button>9</button>
-        <button class="operand">x</button>
+        <button class="operator">x</button>
       </div>
       <div class="row">
         <button>4</button>
         <button>5</button>
         <button>6</button>
-        <button class="operand">-</button>
+        <button class="operator">-</button>
       </div>
       <div class="row">
         <button>1</button>
         <button>2</button>
         <button>3</button>
-        <button class="operand">+</button>
+        <button class="operator">+</button>
       </div>
       <div class="row">
         <button id="zero">0</button>
-        <button class="operand">.</button>
+        <button>.</button>
         <button id="equal">=</button>
       </div>
     </div>
   </div>
+  <script src="script.js"></script>
 </body>
 </html>
