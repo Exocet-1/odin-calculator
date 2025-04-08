@@ -1,5 +1,6 @@
 const keypad = document.querySelector('.keypad');
 const input = document.querySelector('.display');
+const decimalBtn = document.getElementById('decimal');
 
 keypad.addEventListener('click', checkInput);
 
@@ -19,11 +20,24 @@ function checkInput (event) {
         clearMemory();
         input.value = 0;
     }
+    else if (event.target.id === 'decimal'){
+        input.value += '.';
+    }
     else {
         if (input.value === "0") input.value = '';
         input.value += event.target.textContent;
+        return; //skip updateDecimalButton()
     }
+    updateDecimalButton();
 };
+
+function updateDecimalButton(){
+    if (!input.value.includes('.'))
+        decimalBtn.removeAttribute('disabled');
+    else
+        decimalBtn.setAttribute('disabled','');
+}
+
 
 let operand = 0;
 let operator = undefined;
@@ -61,6 +75,7 @@ function doCalculation(op, value){
         case '-':
             return operand - Number(value);
         case '/':
+            if (value == 0) return 'Bro...';
             return operand / Number(value);
         case 'x':
             return operand * Number(value);
