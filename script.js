@@ -19,9 +19,11 @@ function checkInput (event) {
         clearMemory();
         input.value = 0;
     }
+    else {
+        if (input.value === "0") input.value = '';
+        input.value += event.target.textContent;
+    }
 };
-
-
 
 let operand = 0;
 let operator = undefined;
